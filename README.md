@@ -67,9 +67,9 @@ classDiagram
 ```
 
 # 🗺️ Acesso aplicação
-- Servidor de Aplicação: 
-- Servidor Swagger:
-- Banco de dados:
+- Servidor de Aplicação: https://genuine-learning-production-6fa5.up.railway.app/
+- Swagger: https://genuine-learning-production-6fa5.up.railway.app/swagger-ui/index.html#/
+- Banco de dados: postgres-production-964f.up.railway.app:5432
 
 ### Capturas de Tela da Execução do Projeto
 
