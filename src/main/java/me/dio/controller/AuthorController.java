@@ -29,7 +29,7 @@ public class AuthorController {
     // Obter autor por ID
     @GetMapping("/{id}")
     public ResponseEntity<Author> getAuthor(@PathVariable Long id) {
-        Author author = authorService.getAuthor(id);
+        Author author = authorService.getAuthorsByIds(id);
         return ResponseEntity.ok(author);
     }
     

@@ -29,13 +29,11 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book createBook(Book book) {
-        // Verificar se os autores existem
-        List<Author> authors = book.getAuthors();
-        for (Author author : authors) {
-            Optional<Author> existingAuthor = Optional.ofNullable(authorService.getAuthor(author.getId()));
-            if (!existingAuthor.isPresent()) {
-                throw new RuntimeException("Author with id " + author.getId() + " not found");
-            }
+        // Verificar se o publisher existe
+        Author author = book.getAuthor();
+        Optional<Author> existingAuthor = Optional.ofNullable(authorService.getAuthorsByIds(author.getId()));
+        if (!existingAuthor.isPresent()) {
+            throw new RuntimeException("Author with id " + author.getId() + " not found");
         }
 
         // Verificar se o publisher existe
@@ -68,11 +66,10 @@ public class BookServiceImpl implements BookService {
         // Atualizar as informações do livro com os dados recebidos
         existingBook.setTitle(book.getTitle());
         existingBook.setDescription(book.getDescription());
+        
+        Author author = authorService.getAuthorsByIds(book.getAuthor().getId());
+        existingBook.setAuthor(author);
 
-        // Atualizar a lista de autores
-        List<Long> authorIds = book.getAuthors().stream().map(Author::getId).toList();
-        List<Author> authors = authorService.getAuthorsByIds(authorIds);
-        existingBook.setAuthors(authors);
 
         // Atualizar o publisher
         Publisher publisher = publisherService.getPublisherById(book.getPublisher().getId());

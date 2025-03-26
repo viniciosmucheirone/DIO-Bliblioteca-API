@@ -28,7 +28,7 @@ public class BookController {
 	            Book createdBook = bookService.createBook(book);
 	            return ResponseEntity.status(201).body(createdBook);
 	        } catch (RuntimeException ex) {
-	            return ResponseEntity.badRequest().body(null);  // Você pode personalizar a resposta aqui
+	            return ResponseEntity.badRequest().body(null);  
 	        }
 	    }
 

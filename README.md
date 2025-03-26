@@ -1,5 +1,8 @@
 # API REST na Nuvem Usando Spring Boot 3, Java 17 e Railway
 
+<h1 align="center">
+    <img  src="/img/home.png" width="300px" />
+</h1>
 
 ### Descrição do Projeto
 Neste projeto, desenvolvi uma API REST utilizando Java 17 e Spring Boot 3 para uma biblioteca, com integração a banco de dados via Spring Data JPA. O objetivo foi criar uma aplicação simples e funcional, com endpoints bem definidos para gerenciar recursos específicos. A API foi implementada com o foco em boas práticas de desenvolvimento e documentação.
@@ -16,8 +19,10 @@ Após a criação da API, o próximo passo foi realizar o deploy na nuvem utiliz
 - Java 17
 - Spring Boot 3
 - Spring Data JPA
-- Swagger/OpenAPI
+- Swagger
 - Railway (para Deploy na Nuvem)
+- H2: Desenvolvimento e testes
+- PostgreSQL: Produção e escalabilidade
 
 ## Figma para Abstração de Domínio
 
@@ -105,6 +110,11 @@ DIO-Biblioteca-API
 │── pom.xml                   # Configuração do Maven e gerenciamento de dependências
 
 ```
+
+<h1 align="center">
+    <img src="img/eclipse.png"/>
+</h1>
+
 ### 📂 Explicação dos Diretórios  
 
 **DIO-Biblioteca-API**.  
@@ -186,9 +196,6 @@ DIO-Biblioteca-API
 - **DELETE** `/api/author/{id}`: Deleta o autor pelo ID.
 
 
-
-
-
 # 🗺️ Acesso aplicação
 - Railway: https://railway.com/
 - Swagger: https://genuine-learning-production-6fa5.up.railway.app/swagger-ui/index.html#/
@@ -253,6 +260,8 @@ Spring Boot 3
 Spring Data JPA
 Swagger/OpenAPI
 Railway (para Deploy na Nuvem)
+H2
+PostgreSQL
 ```
 ### Instalação
 #### 1 - Clone este repositório:

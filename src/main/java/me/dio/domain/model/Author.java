@@ -7,7 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 
 
 @Entity(name = "tb_author")
@@ -19,7 +19,7 @@ public class Author {
 	private String name;
 	
 	
-    @ManyToMany(mappedBy = "authors")
+	@OneToMany(mappedBy = "author")
     private List<Book> books;
 	
 	public Long getId() {

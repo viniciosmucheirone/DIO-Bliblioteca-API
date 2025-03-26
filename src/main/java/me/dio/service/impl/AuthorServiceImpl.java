@@ -1,13 +1,12 @@
 package me.dio.service.impl;
 
-
-import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import me.dio.domain.model.Author;
+
 import me.dio.domain.repository.AuthorRepository;
 import me.dio.service.AuthorService;
 
@@ -19,9 +18,10 @@ public class AuthorServiceImpl implements AuthorService {
 	   private AuthorRepository authorRepository;
 
 	   @Override
-	   public List<Author> getAuthorsByIds(List<Long> ids) {
-	        return authorRepository.findAllById(ids);  // Usa o método para buscar os autores por uma lista de IDs
+	   public Author getAuthorsByIds(Long id) {
+	        return authorRepository.findById(id).orElseThrow(NoSuchElementException::new); // Usa o método para buscar os autores por uma lista de IDs
 	   }
+	   
 
 	   @Override
 	   public Author createAuthor(Author author) {
@@ -42,10 +42,10 @@ public class AuthorServiceImpl implements AuthorService {
 	       return authorRepository.save(existingAuthor);
 	   }
 
-	@Override
-	public Author getAuthor(Long id) {
-		return authorRepository.findById(id).orElseThrow(NoSuchElementException::new);
-	}
+	//@Override
+	//public Author getAuthor(Long id) {
+	//	return authorRepository.findById(id).orElseThrow(NoSuchElementException::new);
+	//}
 	
     @Override
     public void deleteAuthor(Long id) {
