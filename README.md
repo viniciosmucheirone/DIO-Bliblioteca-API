@@ -69,40 +69,46 @@ classDiagram
     Person "1" -- "0..*" BookStatus : registers
     Book "1" -- "0..*" BookStatus : is associated with
     Author "1" -- "0..*" Book : writes
-    Book "0..*" -- "1" Publisher : published by
+    Book "0.." -- "1" Publisher : published by
 ```
 
 ## 📁 Estrutura de Diretórios do Projeto
 
 ```plaintext
+# 📂 Explicação dos Diretórios  
+
+Este documento explica a função de cada diretório no projeto **DIO-Biblioteca-API**.  
+
+```plaintext
 DIO-Biblioteca-API
-│── .mvn/                    
-│── img/                     
+│── .mvn/                    # Arquivos do Maven Wrapper para compatibilidade entre versões
+│── img/                     # Armazena imagens, como diagramas e prints do projeto
 │── src/
 │   ├── main/
 │   │   ├── java/me/dio/       
-│   │   │   ├── controller/    
-│   │   │   ├── exception/     
-│   │   │   ├── domain/        
-│   │   │   │   ├── model/
-│   │   │   ├── repository/    
-│   │   │   ├── service/       
-│   │   │   ├── BibliotecaDigitaisApplication.java  
+│   │   │   ├── controller/    # Define os endpoints da API e recebe requisições HTTP
+│   │   │   ├── exception/     # Gerencia tratamento de erros e respostas personalizadas
+│   │   │   ├── domain/        # Contém as entidades do sistema e suas relações
+│   │   │   │   ├── model/     # Modelos de dados mapeados via JPA
+│   │   │   ├── repository/    # Interfaces do Spring Data JPA para operações no banco
+│   │   │   ├── service/       # Implementa a lógica de negócio da aplicação
+│   │   │   ├── BibliotecaDigitaisApplication.java  # Classe principal que inicializa a API
 │   │   │
 │   │   ├── resources/
-│   │   │   ├── application.properties  
-│   │   │   ├── application.yml         
+│   │   │   ├── application.properties  # Configuração da aplicação no formato .properties
+│   │   │   ├── application.yml         # Configuração alternativa no formato YAML
 │   │
 │   ├── test/java/me/dio/  
-│   │   ├── BibliotecaDigitaisApplicationTests.java  
+│   │   ├── BibliotecaDigitaisApplicationTests.java  # Testes unitários e de integração
 │
-│── .gitattributes
-│── .gitignore
-│── Procfile              
-│── README.md
-│── mvnw
-│── mvnw.cmd
-│── pom.xml
+│── .gitattributes            # Configurações para controle de arquivos no Git
+│── .gitignore                # Define arquivos que não devem ser versionados
+│── Procfile                  # Necessário para deploy no Railway
+│── README.md                 # Documentação principal do projeto
+│── mvnw                      # Script para rodar o Maven Wrapper no Linux/macOS
+│── mvnw.cmd                  # Script para rodar o Maven Wrapper no Windows
+│── pom.xml                   # Configuração do Maven e gerenciamento de dependências
+
 ```
 ### 📂 Explicação dos Diretórios  
 
