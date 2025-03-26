@@ -77,7 +77,7 @@ classDiagram
 ```plaintext
 # 📂 Explicação dos Diretórios  
 
-Este documento explica a função de cada diretório no projeto **DIO-Biblioteca-API**.  
+Abaixo a função de cada diretório no projeto **DIO-Biblioteca-API**.  
 
 ```plaintext
 DIO-Biblioteca-API
