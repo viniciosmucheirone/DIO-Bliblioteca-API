@@ -6,6 +6,12 @@ Neste projeto, desenvolvi uma API REST utilizando Java 17 e Spring Boot 3 para u
 
 Após a criação da API, o próximo passo foi realizar o deploy na nuvem utilizando a plataforma Railway, que facilitou o processo de disponibilização da aplicação sem a necessidade de configurações complexas.
 
+### Objetivos do Projeto:
+- Criar uma API REST que seja capaz de receber requisições HTTP e interagir com o banco de dados.
+- Garantir uma documentação clara da API, facilitando o uso e entendimento dos endpoints.
+- Implementar a aplicação na nuvem, permitindo acesso remoto à API de qualquer lugar.
+
+
 ## ⛏️ Tecnologias utilizadas (Pré-requisitos): 
 - Java 17
 - Spring Boot 3
@@ -63,11 +69,76 @@ classDiagram
     Person "1" -- "0..*" BookStatus : registers
     Book "1" -- "0..*" BookStatus : is associated with
     Author "1" -- "0..*" Book : writes
-    Book "1" -- "1" Publisher : published by
+    Book "0.." -- "1" Publisher : published by
 ```
 
+## 📁 Estrutura de Diretórios do Projeto
+
+```plaintext
+DIO-Biblioteca-API
+│── .mvn/                    
+│── img/                     
+│── src/
+│   ├── main/
+│   │   ├── java/me/dio/       
+│   │   │   ├── controller/    
+│   │   │   ├── exception/     
+│   │   │   ├── domain/        
+│   │   │   │   ├── model/
+│   │   │   ├── repository/    
+│   │   │   ├── service/       
+│   │   │   ├── BibliotecaDigitaisApplication.java  
+│   │   │
+│   │   ├── resources/
+│   │   │   ├── application.properties  
+│   │   │   ├── application.yml         
+│   │
+│   ├── test/java/me/dio/  
+│   │   ├── BibliotecaDigitaisApplicationTests.java  
+│
+│── .gitattributes
+│── .gitignore
+│── Procfile              
+│── README.md
+│── mvnw
+│── mvnw.cmd
+│── pom.xml
+```
+### 📂 Explicação dos Diretórios  
+
+**DIO-Biblioteca-API**.  
+
+### 📁 `.mvn/`  
+- Contém arquivos do **Maven Wrapper** para garantir compatibilidade entre versões.  
+
+### 📁 `img/`  
+- Armazena imagens, como diagramas e prints do projeto.  
+
+### 📁 `src/main/java/me/dio/`  
+Pacote principal da aplicação, dividido em:  
+
+- **`controller/`** → Define os **endpoints da API** e recebe requisições HTTP.  
+- **`exception/`** → Gerencia **tratamento de erros** e respostas personalizadas.  
+- **`domain/model/`** → Contém as **entidades** do sistema mapeadas via JPA.  
+- **`repository/`** → Interfaces do **Spring Data JPA** para operações no banco.  
+- **`service/`** → Lógica de **negócio** e processamento de dados.  
+- **`BibliotecaDigitaisApplication.java`** → Classe principal que inicializa a API.  
+
+### 📁 `src/main/resources/`  
+- **`application.properties` / `application.yml`** → Configuração da aplicação.  
+
+### 📁 `src/test/java/me/dio/`  
+- **`BibliotecaDigitaisApplicationTests.java`** → Testes unitários e de integração.  
+
+### 📂 Arquivos Importantes  
+- **`.gitignore`** → Define arquivos que não devem ser versionados.  
+- **`Procfile`** → Necessário para **deploy no Railway**.  
+- **`README.md`** → Documentação principal do projeto.  
+- **`pom.xml`** → Configuração do **Maven** e dependências.  
+
+---
+
 # 🗺️ Acesso aplicação
-- Servidor de Aplicação: https://genuine-learning-production-6fa5.up.railway.app/
 - Swagger: https://genuine-learning-production-6fa5.up.railway.app/swagger-ui/index.html#/
 - Banco de dados: postgres-production-964f.up.railway.app:5432
 
@@ -75,36 +146,7 @@ classDiagram
 
 Aqui estão algumas capturas de tela que ilustram o funcionamento da API e a documentação gerada via Swagger/OpenAPI:
 
-#### Tela 1: Visualização dos Endpoints da API no Swagger
-<h1 align="center">
-    <img alt="Gobarber" src="img\swagger.png"/>
-</h1>
-
-#### Tela 2: Executando uma Requisição POST para Criar um Novo Recurso
-
-<h1 align="center">
-    <img alt="Gobarber" src="img\swagger_post.png"/>
-</h1>
-
-#### Tela 3: Resultado da Requisição GET para Listar Recursos
-
-<h1 align="center">
-    <img alt="Gobarber" src="img\swagger_get.png"/>
-</h1>
-
-##### Tela 3.1: Resultado da Requisição GET para Listar Recursos
-
-<h1 align="center">
-    <img alt="Gobarber" src="img\swagger_get_json.png"/>
-</h1>
-
-#### Tela 4: Registro salvo no banco de Dados PostgreSql 
-
-<h1 align="center">
-    <img alt="Gobarber" src="img\swagger_registro_salvo.png"/>
-</h1>
-
-#### Tela 5: Deploy com railway
+#### Tela 1: Deploy com railway
 
 <h1 align="center">
     <img alt="Gobarber" src="img\Deploy_railway_1.png"/>
@@ -120,10 +162,36 @@ Acessando a Aplicação
     <img alt="Gobarber" src="img\Deploy_railway_3.png"/>
 </h1>
 
-### Objetivos do Projeto:
-- Criar uma API REST que seja capaz de receber requisições HTTP e interagir com o banco de dados.
-- Garantir uma documentação clara da API, facilitando o uso e entendimento dos endpoints.
-- Implementar a aplicação na nuvem, permitindo acesso remoto à API de qualquer lugar.
+
+#### Tela 2: Visualização dos Endpoints da API no Swagger
+<h1 align="center">
+    <img alt="Gobarber" src="img\swagger.png"/>
+</h1>
+
+#### Tela 3: Executando uma Requisição POST para Criar um Novo Recurso
+
+<h1 align="center">
+    <img alt="Gobarber" src="img\swagger_post.png"/>
+</h1>
+
+#### Tela 4: Resultado da Requisição GET para Listar Recursos
+
+<h1 align="center">
+    <img alt="Gobarber" src="img\swagger_get.png"/>
+</h1>
+
+##### Tela 4.1: Resultado da Requisição GET para Listar Recursos
+
+<h1 align="center">
+    <img alt="Gobarber" src="img\swagger_get_json.png"/>
+</h1>
+
+#### Tela 5: Registro salvo no banco de Dados PostgreSql 
+
+<h1 align="center">
+    <img alt="Gobarber" src="img\swagger_registro_salvo.png"/>
+</h1>
+
 
 #  ⚙️ Como Rodar o Projeto Localmente:  <a name = "tinstall"></a>
 ### Pré-requisitos
