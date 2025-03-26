@@ -73,12 +73,7 @@ classDiagram
 ```
 
 ## 📁 Estrutura de Diretórios do Projeto
-
-```plaintext
-# 📂 Explicação dos Diretórios  
-
 Abaixo a função de cada diretório no projeto **DIO-Biblioteca-API**.  
-
 ```plaintext
 DIO-Biblioteca-API
 │── .mvn/                    # Arquivos do Maven Wrapper para compatibilidade entre versões
