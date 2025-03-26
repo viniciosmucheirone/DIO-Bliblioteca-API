@@ -110,7 +110,7 @@ DIO-Biblioteca-API
 │── pom.xml                   # Configuração do Maven e gerenciamento de dependências
 
 ```
-Abaixo diretório no projeto bo Eclipse
+Abaixo diretório do projeto no Eclipse
 <h1 align="center">
     <img src="img/eclipse.png"/>
 </h1>
