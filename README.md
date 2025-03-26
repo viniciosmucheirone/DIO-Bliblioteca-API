@@ -136,6 +136,59 @@ DIO-Biblioteca-API
 - **`pom.xml`**: Configuração do **Maven** e dependências.
 ---
 
+## 🔎 Endpoints da API
+
+### 1. Publisher Controller
+
+- **GET** `/api/publisher/{id}`: Retorna o publisher pelo ID.
+- **PUT** `/api/publisher/{id}`: Atualiza o publisher pelo ID.
+- **DELETE** `/api/publisher/{id}`: Deleta o publisher pelo ID.
+- **POST** `/api/publisher`: Cria um novo publisher.
+
+---
+
+### 2. Person Controller
+
+- **GET** `/api/person/id/{id}`: Retorna a pessoa pelo ID.
+- **GET** `/api/person/email/{email}`: Retorna a pessoa pelo email.
+- **PUT** `/api/person/{id}`: Atualiza a pessoa pelo ID.
+- **DELETE** `/api/person/{id}`: Deleta a pessoa pelo ID.
+- **POST** `/api/person`: Cria uma nova pessoa.
+
+---
+
+### 3. Book Status Controller
+
+- **GET** `/api/bookstatus/{id}`: Retorna o status do livro pelo ID.
+- **GET** `/api/bookstatus`: Retorna todos os status dos livros.
+- **POST** `/api/bookstatus`: Cria um novo status de livro.
+- **PUT** `/api/bookstatus/{id}`: Atualiza o status do livro pelo ID.
+- **DELETE** `/api/bookstatus/{id}`: Deleta o status do livro pelo ID.
+- **GET** `/api/bookstatus/status/{status}`: Filtra livros pelo status.
+
+---
+
+### 4. Book Controller
+
+- **GET** `/api/book/{id}`: Retorna o livro pelo ID.
+- **GET** `/api/book`: Retorna todos os livros.
+- **POST** `/api/book`: Cria um novo livro.
+- **PUT** `/api/book/{id}`: Atualiza o livro pelo ID.
+- **DELETE** `/api/book/{id}`: Deleta o livro pelo ID.
+
+---
+
+### 5. Author Controller
+
+- **GET** `/api/author/{id}`: Retorna o autor pelo ID.
+- **POST** `/api/author`: Cria um novo autor.
+- **PUT** `/api/author/{id}`: Atualiza o autor pelo ID.
+- **DELETE** `/api/author/{id}`: Deleta o autor pelo ID.
+
+
+
+
+
 # 🗺️ Acesso aplicação
 - Railway: https://railway.com/
 - Swagger: https://genuine-learning-production-6fa5.up.railway.app/swagger-ui/index.html#/
