@@ -137,8 +137,9 @@ DIO-Biblioteca-API
 ---
 
 # 🗺️ Acesso aplicação
+- Railway: https://railway.com/
 - Swagger: https://genuine-learning-production-6fa5.up.railway.app/swagger-ui/index.html#/
-- Banco de dados: postgres-production-964f.up.railway.app:5432
+
 
 ### Capturas de Tela da Execução do Projeto
 
