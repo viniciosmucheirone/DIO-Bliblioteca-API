@@ -73,7 +73,7 @@ classDiagram
 
     Person "1" -- "0..*" BookStatus : registers
     Book "1" -- "0..*" BookStatus : is associated with
-    Author "1" -- "1..*" Book : writes
+    Author "1..*" -- "0..*" Book : writes
     Book "0.." -- "1" Publisher : published by
 ```
 
