@@ -115,37 +115,6 @@ Abaixo diretório do projeto no Eclipse
     <img src="img/eclipse.png"/>
 </h1>
 
-### 📂 Explicação dos Diretórios  
-
-**DIO-Biblioteca-API**.  
-
-- **`.mvn/`**: Contém arquivos do **Maven Wrapper** para garantir compatibilidade entre versões.
-
-- **`img/`**: Armazena imagens, como diagramas e prints do projeto.
-
-- **`src/main/java/me/dio/`**: Pacote principal da aplicação, dividido em:
-  - **`controller/`**: Define os **endpoints da API** e recebe requisições HTTP.
-  - **`exception/`**: Gerencia **tratamento de erros** e respostas personalizadas.
-  - **`domain/model/`**: Contém as **entidades** do sistema mapeadas via JPA.
-  - **`repository/`**: Interfaces do **Spring Data JPA** para operações no banco.
-  - **`service/`**: Lógica de **negócio** e processamento de dados.
-  - **`BibliotecaDigitaisApplication.java`**: Classe principal que inicializa a API.
-
-- **`src/main/resources/`**: 
-  - **`application.properties` / `application.yml`**: Configuração da aplicação.
-
-- **`src/test/java/me/dio/`**: 
-  - **`BibliotecaDigitaisApplicationTests.java`**: Testes unitários e de integração.
-
-- **`.gitignore`**: Define arquivos que não devem ser versionados.
-
-- **`Procfile`**: Necessário para **deploy no Railway**.
-
-- **`README.md`**: Documentação principal do projeto.
-
-- **`pom.xml`**: Configuração do **Maven** e dependências.
----
-
 ## 🔎 Endpoints da API
 
 ### 1. Publisher Controller
