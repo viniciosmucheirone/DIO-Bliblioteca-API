@@ -19,6 +19,7 @@ Após a criação da API, o próximo passo foi realizar o deploy na nuvem utiliz
 - Java 17
 - Spring Boot 3
 - Spring Data JPA
+- Eclipse
 - Swagger
 - Railway (para Deploy na Nuvem)
 - H2: Desenvolvimento e testes
